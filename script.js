@@ -25,3 +25,14 @@ footerNave.addEventListener("mouseover", (e) => {
 footerNave.addEventListener("mouseout", (e) => {
   handlover(e, "1");
 });
+/*    learn morebtn smooth scrolling
+*/
+const headerTitle=document.querySelector('.header__title')
+const section1 = document.querySelector("#section--1");
+headerTitle.addEventListener('click',(e)=>{
+  if(e.target.classList.contains('btn--scroll-to'))
+  {
+    section1.scrollIntoView({behavior:'smooth'})
+  }
+
+})
