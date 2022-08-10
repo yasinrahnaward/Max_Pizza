@@ -1,4 +1,4 @@
-'user strict'
+'use strict'
 
 // footer navigation fade feature
 
@@ -36,3 +36,52 @@ headerTitle.addEventListener('click',(e)=>{
   }
 
 })
+
+
+
+// header imges slider component
+const headerSlides=document.querySelectorAll('.slide')
+const headerDotsContainer=document.querySelector('.header-dots-container')
+const headerContainer=document.querySelector('.header__title')
+const createDotesForHeader=()=>{
+    headerSlides.forEach((_,index)=>{
+        headerDotsContainer.insertAdjacentHTML('beforeend',
+        `<button class="dots__dot" data-slide="${index}"></button>`)
+    })
+}
+createDotesForHeader()
+
+const headerSlider=(currSlide)=>{
+    headerSlides.forEach((el,index)=>{
+        el.style.transform=`translateX(${120*(index-currSlide)}%)`
+    })
+}
+headerSlider(0)
+
+
+let currHeaderSlide=0;
+headerDotsContainer.addEventListener('click',(e)=>{
+    if(e.target.classList.contains('dots__dot'))
+    {
+        const dotIndex=e.target.dataset.slide
+        headerSlider(dotIndex)
+        currHeaderSlide = dotIndex
+        activeHeaderDot(dotIndex)
+        
+    }
+})
+
+
+setInterval(() => {
+    currHeaderSlide==2 ?currHeaderSlide =0 :currHeaderSlide++
+    headerSlider(currHeaderSlide)
+    activeHeaderDot(currHeaderSlide)
+}, 5000);
+
+const activeHeaderDot=(activeSlide)=>{
+    document.querySelectorAll('.dots__dot').forEach((el,i)=>{
+        el.classList.remove('dots__dot--active')
+    })
+    document.querySelector(`.dots__dot[data-slide="${activeSlide}"]`).classList.add('dots__dot--active')
+}
+activeHeaderDot(0)

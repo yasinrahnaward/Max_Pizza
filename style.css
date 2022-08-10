@@ -133,6 +133,40 @@
   transform: translateY(20rem);
 }
 
+/* dots */
+.dots {
+  margin: auto;
+  justify-content: center;
+  position: sticky;
+  display: flex;
+  justify-content:safe;
+}
+
+.dots__dot {
+  border: none;
+  background-color:rgb(207, 207, 207);
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  cursor: pointer;
+  
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+
+.dots__dot--active {
+  background-color:var(--footer-hover-text);
+  opacity: 1;
+  border-radius: 10px;
+  width: 3rem;
+}
 /* header */
 .header__title {
   height: 100%;
