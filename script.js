@@ -85,3 +85,28 @@ const activeHeaderDot=(activeSlide)=>{
     document.querySelector(`.dots__dot[data-slide="${activeSlide}"]`).classList.add('dots__dot--active')
 }
 activeHeaderDot(0)
+
+
+
+// Navigation smooth scrolling
+const navLinkContainer = document.querySelector(".nav-links");
+navLinkContainer.addEventListener("click", (e) => {
+  e.preventDefault();
+  const id = e.target.getAttribute("href");
+  if (e.target.classList.contains("link-addr"))
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+});
+
+// footer nav smooth scrolling
+const footerNavLinkContainer = document.querySelector(".footer-navigation");
+footerNavLinkContainer.addEventListener('click',(e)=>{
+  e.preventDefault()
+  console.log(e.target);
+  
+  console.log(e.target.classList.contains('footer__link'));
+  
+  if(!e.target.classList.contains('footer__link')) return
+  const footerTargetItemhref=e.target.getAttribute('href')
+  document.querySelector(footerTargetItemhref).scrollIntoView({behavior:'smooth'})
+  
+})
