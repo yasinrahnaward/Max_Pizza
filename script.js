@@ -101,12 +101,34 @@ navLinkContainer.addEventListener("click", (e) => {
 const footerNavLinkContainer = document.querySelector(".footer-navigation");
 footerNavLinkContainer.addEventListener('click',(e)=>{
   e.preventDefault()
-  console.log(e.target);
-  
-  console.log(e.target.classList.contains('footer__link'));
   
   if(!e.target.classList.contains('footer__link')) return
   const footerTargetItemhref=e.target.getAttribute('href')
   document.querySelector(footerTargetItemhref).scrollIntoView({behavior:'smooth'})
   
 })
+// sticky navigation
+
+const header=document.querySelector('.header__title')
+const navigation=document.querySelector('.navigation-bar')
+const nav_height=navigation.getBoundingClientRect().height
+const sticky=(entries,obs)=>{
+    const [entry]=entries
+    if(entry.isIntersecting) {
+        navigation.classList.remove("sticky", "center-align");
+    navigation.querySelector(".center-align").classList.remove("middle");
+    }
+    else{
+
+        navigation.classList.add("sticky", "center-align");
+        navigation.querySelector(".center-align").classList.add("middle");
+    }
+    
+}
+const stickyNavObserve=new IntersectionObserver(sticky,{
+    root:null,
+    threshold:0,
+    rootMargin:`-${nav_height}px`
+})
+stickyNavObserve.observe(header)
+

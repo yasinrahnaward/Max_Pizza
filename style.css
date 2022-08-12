@@ -118,14 +118,21 @@
   background-color: var(--footer-hover-text);
   padding: 0.2rem 1rem;
   color: white;
+
 }
 #logo:hover {
-  filter: blur(1px);
+  background-color: var(--footer-hover-text);
+  
+  color: white;
+  margin-left: 4%;
+  padding: 0 0 0 1rem;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
 }
-#logo:active {
-  filter: blur(0);
+#logo:hover #max {
+  border: 1px solid var(--footer-hover-text);
+  background-color: var(--footer-light-bg);
+  padding: 0 0 0 0.5rem;
+  color: var(--footer-hover-text);
 }
 
 .section--hidden {
@@ -362,6 +369,7 @@
   width: 7rem;
   position: sticky;
   top: 28rem;
+  transition: 10s ease-in-out;
 }
 .footer-ground {
   width: 100%;
