@@ -132,3 +132,23 @@ const stickyNavObserve=new IntersectionObserver(sticky,{
 })
 stickyNavObserve.observe(header)
 
+
+// reveal sections intersection observe
+const reveal=(entries,obs)=>{
+  const [entry]=entries
+  if(!entry.isIntersecting) return
+  entry.target.classList.remove('section--hidden')
+  obs.unobserve( entry.target)
+  
+}
+const sectionObserve=new IntersectionObserver(reveal,{
+  root:null,
+  threshold:0.15
+})
+const allSections=document.querySelectorAll('section')
+allSections.forEach(s=>{
+  s.classList.add('section--hidden')
+  sectionObserve.observe(s)
+})
+const img3=document.querySelector('.img3')
+
