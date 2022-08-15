@@ -266,6 +266,434 @@
   margin-left: 35%;
 }
 
+.food-list-title{
+  display: grid;
+  margin: auto;
+}
+.food-list-title>h2{
+  width: max-content;
+  margin: auto;
+}
+.food-list-title>p{
+  margin: auto;
+  text-align: center;
+  font-size: 1.6rem;
+  width: 80%;
+  padding: 1rem 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.foodlist-container{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+}
+.btn-food{
+  padding: 1rem;
+  margin: 0 5px;
+  background-color: var(--footer-gray-bg);
+  cursor: pointer;
+  border-radius: .21rem;
+}
+.btn-food>a{
+  text-decoration: none;
+  color: var(--footer-dark-text);
+}
+.btn-food:hover{
+  background-color:var(--footer-hover-text);
+  transition: .2s ease-in-out;
+}
+.btn-food:hover a{
+  color: var(--footer-light-text);
+  transition: .2s ease-in-out;
+}
+.btn-food:active{
+  transform: scale(.93);
+  transition: .1s ease-in-out;
+}
+.btn-food:nth-child(1)
+{
+  background-color:var(--footer-hover-text);
+}
+.btn-food:nth-child(1) a
+{color: var(--footer-light-text);
+}
+
+
+/* 
+  sections  section general style
+  */
+.section {
+  padding: 5rem 3rem 12rem 3rem;
+  border-top: 1px solid #ddd;
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.section__title {
+  max-width: max-content;
+  margin: 0 auto 2rem auto;
+}
+
+.section__description {
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--footer-dark-text);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 1rem;
+}
+.section__description > span {
+  color: white;
+  background-color: var(--footer-hover-text);
+  border-radius: 5px;
+  padding: 0 4px 0 4px;
+}
+.section__header {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--footer-dark-text);
+}
+/* 
+  feature section*/
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+  margin: 0 5rem;
+}
+
+.features__img {
+  width: 80%;
+  margin: 3rem 0 0 0 ;
+}
+
+.features__feature {
+  align-self: center;
+  justify-self: center;
+  width: 80%;
+  font-size: 1.4rem;
+  color: var(--footer-dark-text);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.features__icon {
+  display: flex;
+  align-items: center;
+  background-color: var(--footer-hover-light);
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.features__header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--footer-dark-text);
+}
+.features__feature > p {
+  font-size: 1.2rem;
+}
+
+
+.food-list-title > h2 {
+  width: max-content;
+  margin: auto;
+}
+.food-list-title > p {
+  margin: auto;
+  text-align: center;
+  font-size: 1.6rem;
+  width: 80%;
+  padding: 1rem 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+
+
+/* section --- 2 food list slider */
+
+.food-list-slider{
+  display: flex;
+  width: 90%;
+  margin: auto ;
+  left: 0;
+  height: 22rem;
+  overflow: hidden;
+  padding: 4rem 0;
+  z-index: 0;
+  justify-content: left; 
+  position: relative;
+}
+.food-list-item
+{
+  position: absolute;
+  width: 15rem;
+  height:fit-content;
+  margin: auto 1rem;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .91rem;
+  background-color: rgb(247, 247, 247);
+  color: var(--footer-dark-text);
+  border-radius: 10px;
+    transition: transform 1s;
+}
+.slider__btn{
+
+   display: grid;
+   position: absolute;
+   margin: auto;
+   padding: 1.2rem 1.4rem;
+   border-radius: 50%;
+
+  margin-top:20vh;
+  z-index: 100;
+  color: var(--footer-hover-text);
+    background-color:#FFF;
+    box-shadow:rgba(172, 172, 172, 0.3) 7px 7px 30px 7px;;
+}
+.slider__btn:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: var(--footer-hover-text);
+  color: var(--footer-light-text);
+  transition: .2s ease-in-out;
+}
+.slider__btn:active{
+  transform: scale(.98);
+  transition: .2s ease-in-out;
+  background-color: var(--footer-light-text);
+  color: var(--footer-dark-text);
+}
+.slider__btn--left{
+  left: 5%;
+}
+.slider__btn--right{
+  left: 95%;
+}
+
+.food-item-img{
+  width: 15rem;
+  height: 14rem;
+  border-radius: 10px 10px  0 0 ;
+  position: relative;
+  margin:0;
+ 
+}
+.food-item-name{
+  margin: 1rem 0 0 1rem ;
+  text-justify:newspaper;
+}
+.food-item-ingrediance{
+  text-justify:newspaper;
+  padding: 0 1rem;
+}
+
+.food-item-order{
+  margin: 1rem 0 0 1rem ;
+  text-justify:newspaper;
+  padding: 8px;
+  background-color:var(--footer-hover-text);
+  cursor: pointer;
+}
+.food-item-order:hover{
+background-color: var(--footer-hover-light);
+}
+.food-item-order:active{
+  transform: scale(0.92);
+  transition: .1s ease-in-out;
+}
+.food-item-order>a{
+text-decoration: none;
+color: var(--footer-dark-text);
+color:var(--footer-light-text);
+
+}
+.food-item-catagori{
+width: max-content;
+display: flex;
+position: relative;
+top: -340px;
+background-color:var(--footer-hover-text);
+padding: 10px 20px 10px 20px;
+color: #ffffff;
+font-family:sans-serif;
+border-radius: 5px;
+left: 0;
+}
+.food-item-price{
+  font-size: 1.1rem;
+  padding: 5px;
+  animation: to-top 1s forwards;
+  transition: .3s ease-in-out;
+  display: none;
+  background-color: var(--footer-hover-text);
+  color: var(--footer-light-text);
+  position: relative;
+
+}
+.show{
+  display: block;
+}
+.food-list-time-description{
+  height: max-content;
+  overflow: hidden;
+}
+img{
+  transition: filter 0.3s;
+ }
+.lazy-img{
+  filter: blur(15px);
+}
+
+
+
+/* tabel booking */
+#section--3 {
+  padding: 4rem 0;
+}
+
+.table-booking-descrribtion {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tabel-booking > img {
+  width: 15rem;
+  height: max-content;
+  margin: 0 1rem;
+}
+
+.tabel-booking:nth-child(2) {
+  width: 40rem;
+  text-justify: distribute-all-lines;
+  text-align: center;
+  overflow: hidden;
+}
+
+#booking-welcome {
+  font-size: 1.3rem;
+  color: var(--footer-hover-text);
+  font-family: cursive;
+  width: max-content;
+  margin: auto;
+  padding: 1rem 1rem 0 1rem;
+}
+#booking-title {
+  font-size: 3rem;
+  font-family: monospace;
+  padding: 1rem;
+  width: max-content;
+  margin: auto;
+}
+#booking-text {
+  width: 30rem;
+  margin: auto;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+}
+#btnbooking-table {
+  padding: 1rem;
+  background-color: var(--footer-hover-text);
+  color: var(--footer-light-text);
+}
+#btnbooking-table:hover {
+  transform: scale(1.01);
+  background-color: var(--footer-hover-light);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* prallax effect in section booking */
+.prallax-bookin-table {
+  width: 100%;
+  height: 20rem;
+  background-image: url("asset/section-3-booking.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 5rem 0;
+  overflow: hidden;
+}
+#booking-parallax-welcome {
+  color: var(--footer-light-text);
+  font-size: 2rem;
+  width: max-content;
+  margin: auto;
+  padding: 5rem 0 1rem 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+#booking-parallax-title {
+  color: var(--footer-light-text);
+  font-size: 3rem;
+  width: max-content;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*  form of table booking */
+.booking-table-form-container {
+  justify-content: center;
+}
+.booking-table-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+}
+.booking-table-form > input,
+select {
+  background-color: var(--footer-gray-bg);
+  padding: 1rem;
+  margin: auto;
+  margin-top: 1rem;
+  width: 15rem;
+  border-radius: 5px;
+}
+.booking-table-form-container {
+  padding-top: 6rem;
+}
+.booking-table-form-container > textarea {
+  background-color: var(--footer-gray-bg);
+  padding: 1rem;
+  margin: 2rem 0rem 0 8%;
+  width: 74%;
+  border-radius: 5px;
+  height: 10rem;
+}
+#btnbooking-table-form {
+  padding: 1rem;
+  background-color: var(--footer-hover-text);
+  color: var(--footer-light-text);
+  margin-left: 5%;
+  position: relative;
+  top: -1rem;
+}
+#btnbooking-table-form:hover {
+  transform: scale(1.01);
+  background-color: var(--footer-hover-light);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.footer-container {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-top: 1rem;
+}
+
+
+
 /* footer  */
 .footer-container {
   height: max-content;
@@ -426,249 +854,4 @@
   font-size: 1rem;
   color: var(--footer-gray-text);
   text-align: center;
-}
-
-/* 
-  sections  section general style
-  */
-.section {
-  padding: 5rem 3rem 12rem 3rem;
-  border-top: 1px solid #ddd;
-  transition: transform 1s, opacity 1s;
-}
-
-.section--hidden {
-  opacity: 0;
-  transform: translateY(8rem);
-}
-
-.section__title {
-  max-width: max-content;
-  margin: 0 auto 7rem auto;
-}
-
-.section__description {
-  font-size: 2.3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: var(--footer-dark-text);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin-bottom: 1rem;
-}
-.section__description > span {
-  color: white;
-  background-color: var(--footer-hover-text);
-  border-radius: 5px;
-  padding: 0 4px 0 4px;
-}
-.section__header {
-  font-size: 2rem;
-  line-height: 1.3;
-  font-weight: 500;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: var(--footer-dark-text);
-}
-/* 
-  feature section*/
-.features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7rem;
-  margin: 0 5rem;
-}
-
-.features__img {
-  width: 100%;
-}
-
-.features__feature {
-  align-self: center;
-  justify-self: center;
-  width: 80%;
-  font-size: 1.4rem;
-  color: var(--footer-dark-text);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.features__icon {
-  display: flex;
-  align-items: center;
-  background-color: var(--footer-hover-light);
-  height: 2.5rem;
-  width: 2.5rem;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-.features__header {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: var(--footer-dark-text);
-}
-.features__feature > p {
-  font-size: 1.2rem;
-}
-.test {
-  height: 20rem;
-  background-image: url("asset/feature1-img-setion-2.jpg");
-  background-size: contain;
-  background-attachment: fixed;
-}
-.test1 {
-  margin-top: 8rem;
-  height: 20rem;
-  background-image: url("asset/feature2-img-setion-2.jpg");
-  background-size: contain;
-  background-attachment: fixed;
-}
-
-
-.food-list-title > h2 {
-  width: max-content;
-  margin: auto;
-}
-.food-list-title > p {
-  margin: auto;
-  text-align: center;
-  font-size: 1.6rem;
-  width: 80%;
-  padding: 1rem 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-
-/* tabel booking */
-#section--3 {
-  padding: 4rem 0;
-}
-
-.table-booking-descrribtion {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.tabel-booking > img {
-  width: 15rem;
-  height: max-content;
-  margin: 0 1rem;
-}
-
-.tabel-booking:nth-child(2) {
-  width: 40rem;
-  text-justify: distribute-all-lines;
-  text-align: center;
-  overflow: hidden;
-}
-
-#booking-welcome {
-  font-size: 1.3rem;
-  color: var(--footer-hover-text);
-  font-family: cursive;
-  width: max-content;
-  margin: auto;
-  padding: 1rem 1rem 0 1rem;
-}
-#booking-title {
-  font-size: 3rem;
-  font-family: monospace;
-  padding: 1rem;
-  width: max-content;
-  margin: auto;
-}
-#booking-text {
-  width: 30rem;
-  margin: auto;
-  font-size: 1rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 1rem;
-}
-#btnbooking-table {
-  padding: 1rem;
-  background-color: var(--footer-hover-text);
-  color: var(--footer-light-text);
-}
-#btnbooking-table:hover {
-  transform: scale(1.01);
-  background-color: var(--footer-hover-light);
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-/* prallax effect in section booking */
-.prallax-bookin-table {
-  width: 100%;
-  height: 20rem;
-  background-image: url("asset/section-3-booking.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  margin: 5rem 0;
-  overflow: hidden;
-}
-#booking-parallax-welcome {
-  color: var(--footer-light-text);
-  font-size: 2rem;
-  width: max-content;
-  margin: auto;
-  padding: 5rem 0 1rem 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-#booking-parallax-title {
-  color: var(--footer-light-text);
-  font-size: 3rem;
-  width: max-content;
-  margin: auto;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/*  form of table booking */
-.booking-table-form-container {
-  justify-content: center;
-}
-.booking-table-form {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  overflow: hidden;
-}
-.booking-table-form > input,
-select {
-  background-color: var(--footer-gray-bg);
-  padding: 1rem;
-  margin: auto;
-  margin-top: 1rem;
-  width: 15rem;
-  border-radius: 5px;
-}
-.booking-table-form-container {
-  padding-top: 6rem;
-}
-.booking-table-form-container > textarea {
-  background-color: var(--footer-gray-bg);
-  padding: 1rem;
-  margin: 2rem 0rem 0 8%;
-  width: 74%;
-  border-radius: 5px;
-  height: 10rem;
-}
-#btnbooking-table-form {
-  padding: 1rem;
-  background-color: var(--footer-hover-text);
-  color: var(--footer-light-text);
-  margin-left: 5%;
-  position: relative;
-  top: -1rem;
-}
-#btnbooking-table-form:hover {
-  transform: scale(1.01);
-  background-color: var(--footer-hover-light);
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
-}
-.footer-container {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-top: 1rem;
 }
